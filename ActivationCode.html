@@ -34,14 +34,14 @@
     </style>
 </head>
 <body>
-    <h1>Enter Activation Code</h1>
+    <h1>Enter Activation Code <br> <br> Previous Answers: 0UR, N, E, GA, @, 1, N, B</h1>
     <input type="password" id="passcode" placeholder="*******">
     <button onclick="checkPasscode()">Submit</button>
 
     <script>
         function checkPasscode() {
             var passcode = document.getElementById('passcode').value;
-            if(passcode == 'B0urne @ga1n' || passcode == 'b0urne @ga1n') {
+            if(passcode == 'B0URNE @GA1N') {
                 window.location.href = 'OpsBrief.html';
             } else {
                 alert('Incorrect Activation Code');
