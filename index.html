@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Terminal</title>
+    <style>
+        body {
+            background: url("DOG1.png");
+            background-repeat: repeat;
+	    background-size: cover;
+            color: solid lime;
+            font-family: 'Courier New', Courier, monospace;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .center {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
+        input[type="password"], button {
+            padding: 10px;
+            font-size: 30px;
+            background-color: transparent;
+            color: lime;
+            border: 2px solid lime;
+            width: fit-content;
+        }
+        input[type="password"] {
+            animation: blinker .8s steps(1) infinite;
+        }
+        @keyframes blinker {
+            50% { border-color: transparent; }
+        }
+    </style>
+    <script>
+        function checkPasscode() {
+            var passcode = document.getElementById('passcode').value;
+            if (passcode === 'B0rn3 @ga1n') {
+                window.location.href = 'page2.html';
+            } else {
+                alert('Incorrect passcode.');
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="center">
+        <input type="password" id="passcode" placeholder="---Enter Activation Code---">
+        <button onclick="checkPasscode()">Submit</button>
+    </div>
+</body>
+</html>
