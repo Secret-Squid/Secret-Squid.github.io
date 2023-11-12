@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Operation Bourne Again</title>
+    <style>
+        body {
+            background-color: black;
+            color: #00FF00;
+            font-family: 'Courier New', Courier, monospace;
+            text-align: center;
+            padding-top: 30%;
+        }
+        input, button {
+            background-color: black;
+            color: #00FF00;
+            border: 1px solid #00FF00;
+            text-align: center;
+            padding: 5px 10px;
+        }
+        button {
+            padding: 5px 30px;
+        }
+        input {
+            animation: blinker 0.8s linear infinite;
+        }
+        @keyframes blinker {
+            50% {
+                border-color: #00FF00;
+            }
+            100% {
+                border-color: black;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Enter [FIRST] [LAST] Name</h1>
+    <input type="text" id="passcode" placeholder="*******">
+    <button onclick="checkPasscode()">Submit</button>
+
+    <script>
+        function checkPasscode() {
+            var passcode = document.getElementById('passcode').value;
+            if(passcode == 'Joseph Stapleton' || passcode == 'Joshua Gallardo' || passcode == 'Alexzandra Albrecht' || passcode == 'Ellijah Chavez' || passcode == 'Grace Chavez' || passcode == 'Titus Frederick' || passcode == 'Joshua Garner' || passcode == 'Emma Sargent' || passcode == 'Abigail Price' || passcode == 'Sarah Quintas' || passcode == 'Sam Quintas' || passcode == 'Nicole Gallardo' || passcode == 'Nina Westcott' || passcode == 'Joseph Rolfe' || passcode == 'Aaron Hendrix' || passcode == 'Jacob Hendrix' || passcode == 'Thomas Rolfe' || passcode == 'Breanna Claton' || passcode == 'Kristopher Bofill' || passcode == 'Michaela Bofill' || passcode == 'Riley Mott') {
+		alert('ACCESS GRANTED.')
+                window.location.href = '0ur.html';
+            } else {
+                alert('ACCESS DENIED. INTRUDER DETECTED.');
+		history.refresh();
+            }
+        }
+    </script>
+</body>
+</html>

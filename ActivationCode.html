@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Operation Bourne Again</title>
+    <style>
+        body {
+            background-color: black;
+            color: #00FF00;
+            font-family: 'Courier New', Courier, monospace;
+            text-align: center;
+            padding-top: 30%;
+        }
+        input, button {
+            background-color: black;
+            color: #00FF00;
+            border: 1px solid #00FF00;
+            text-align: center;
+            padding: 5px 10px;
+        }
+        button {
+            padding: 5px 30px;
+        }
+        input {
+            animation: blinker 0.8s linear infinite;
+        }
+        @keyframes blinker {
+            50% {
+                border-color: #00FF00;
+            }
+            100% {
+                border-color: black;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Enter Activation Code</h1>
+    <input type="password" id="passcode" placeholder="*******">
+    <button onclick="checkPasscode()">Submit</button>
+
+    <script>
+        function checkPasscode() {
+            var passcode = document.getElementById('passcode').value;
+            if(passcode == 'B0urne @ga1n' || passcode == 'b0urne @ga1n') {
+                window.location.href = 'OpsBrief.html';
+            } else {
+                alert('Incorrect Activation Code');
+            }
+        }
+    </script>
+</body>
+</html>

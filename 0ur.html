@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Start</title>
+    <style>
+        body {
+            background-color: black;
+            color: #00FF00;
+            font-family: 'Courier New', Courier, monospace;
+            text-align: center;
+            padding-top: 0%;
+        }
+        input, button {
+            background-color: black;
+            color: #00FF00;
+            border: 1px solid #00FF00;
+            text-align: center;
+            padding: 5px 10px;
+        }
+        button {
+            padding: 5px 30px;
+        }
+        input {
+            animation: blinker 0.8s linear infinite;
+        }
+        @keyframes blinker {
+            50% {
+                border-color: #00FF00;
+            }
+            100% {
+                border-color: black;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1><img src="0ur_skull.jpg"> </h1>
+    <input type="text" id="passcode" placeholder="*******">
+    <button onclick="checkPasscode()">Submit</button>
+
+    <script>
+        function checkPasscode() {
+            var passcode = document.getElementById('passcode').value;
+            if(passcode == '0ur') {
+                window.location.href = 'N.html';
+            } else {
+                alert('Incorrect Answer. Try Again');
+            }
+        }
+    </script>
+</body>
+</html>
